@@ -1,0 +1,36 @@
+<div class="login-wrapper">
+  <mat-card class="login-card">
+    <div class="logo-section">
+      <!-- Logo Placeholder -->
+      <div class="logo-placeholder">S99</div>
+      <mat-card-title class="welcome-title">Welcome</mat-card-title>
+    </div>
+
+    <!-- <mat-card-header class="login-header">
+      <mat-card-title class="login-title">เข้าสู่ระบบ</mat-card-title>
+      <mat-card-subtitle class="login-subtitle">กรุณากรอกข้อมูลเพื่อเข้าสู่ระบบ</mat-card-subtitle>
+    </mat-card-header> -->
+
+    <mat-card-content>
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>ชื่อผู้ใช้</mat-label>
+          <input matInput placeholder="กรอกชื่อผู้ใช้" formControlName="username" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>รหัสผ่าน</mat-label>
+          <input matInput [type]="hidePassword ? 'password' : 'text'" placeholder="กรอกรหัสผ่าน" formControlName="password" required>
+          <button mat-icon-button matSuffix (click)="togglePasswordVisibility()" type="button">
+            <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <div class="button-container">
+          <button mat-raised-button class="gradient-button" type="submit">เข้าสู่ระบบ</button>
+          <button mat-raised-button color="accent" (click)="navigateToRegister()">สมัครสมาชิก</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

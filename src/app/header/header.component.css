@@ -1,0 +1,89 @@
+/* Header Styles */
+@font-face {
+  font-family: 'TH Sarabun New';
+  src: url('/assets/font/THSarabunNew/THSarabunNew.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, html {
+  font-family: 'TH Sarabun New', sans-serif;
+}
+
+
+
+
+.header {
+  background-color: #333;
+  padding: 15px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.user-controls {
+  display: flex;
+  align-items: center;
+}
+
+.username-display {
+  display: flex;
+  align-items: center;
+  background-color: #444;
+  padding: 8px 12px;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.username {
+  font-size: 1.1rem;
+  color: #ffcc00;
+  font-weight: 500;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #ffcc00;
+}
+
+/* Common button styles */
+.btn-outline-light,
+.btn-primary {
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Gradient button for .btn-outline-light */
+.btn-outline-light {
+  background: linear-gradient(90deg, #00c6ff, #0072ff); /* Gradient background */
+  color: #fff; /* White text color */
+  border: none; /* Remove border */
+}
+
+.btn-outline-light:hover {
+  background: linear-gradient(90deg, #00a5e0, #005ec4); /* Darker gradient on hover */
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: #ff6b6b;
+  border: none;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #ff5252;
+  color: #fff;
+}
+
+.logout-button {
+  margin-left: 15px;
+}

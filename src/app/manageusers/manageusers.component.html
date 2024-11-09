@@ -1,0 +1,25 @@
+<div class="manage-users">
+  <h2>รายชื่อสมาชิก</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; let i = index">
+        <td>{{ user.username }}</td>
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td>{{ user.email }}</td>
+        <td>
+          <button mat-button color="warn" (click)="deleteUser(i)">ลบ</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

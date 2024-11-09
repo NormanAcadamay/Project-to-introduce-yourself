@@ -1,0 +1,24 @@
+<div class="profile-wrapper">
+  <!-- ปุ่มเพิ่มข้อมูล แสดงเฉพาะเมื่อเป็น admin -->
+  <button *ngIf="isAdmin" mat-raised-button color="primary" (click)="startAdding()" class="add-button">เพิ่มข้อมูล</button>
+
+  <div *ngFor="let profile of profiles; let i = index" class="profile-card">
+    <mat-card class="small-card">
+      <img mat-card-image [src]="profile.image" alt="{{ profile.firstName }} {{ profile.lastName }}">
+      <mat-card-content>
+        <h4>{{ profile.firstName }} {{ profile.lastName }} ({{ profile.nickName }})</h4>
+        <p><strong>Age:</strong> {{ profile.age }}</p>
+        <p><strong>Birthday:</strong> {{ profile.birthday }}</p>
+        <p><strong>Phone:</strong> {{ profile.phone }}</p>
+        <p><strong>Email:</strong> {{ profile.email }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="accent" (click)="viewProfile(profile)">ดูข้อมูล</button>
+        <!-- ปุ่มแก้ไขโปรไฟล์ (สำหรับผู้ใช้ทุกคน) -->
+        <button mat-button color="primary" (click)="editProfile(i)">แก้ไข</button>
+        <!-- ปุ่มลบ แสดงเฉพาะเมื่อเป็น admin -->
+        <button *ngIf="isAdmin" mat-button color="warn" (click)="deleteProfile(i)">ลบ</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

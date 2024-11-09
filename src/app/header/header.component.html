@@ -1,0 +1,22 @@
+<header class="header bg-dark text-white">
+  <div class="container d-flex align-items-center justify-content-between">
+    <!-- Logo -->
+    <a routerLink="/home" class="logo text-white text-decoration-none">SOMJAI99</a>
+
+    <!-- User Info and Login/Register/Logout Buttons -->
+    <div class="user-controls d-flex align-items-center">
+      <!-- Show "Hi, [username]" if logged in, otherwise show Login/Register links -->
+      <ng-container *ngIf="isLoggedIn; else guestLinks">
+        <div class="username-display d-flex align-items-center me-3">
+          <img src="assets/images/Gojo.jpg" alt="User Avatar" class="avatar me-2">
+          <span class="username">สวัสดี, {{ username }}</span>
+        </div>
+        <button (click)="logout()" class="btn btn-outline-light logout-button">ออกจากระบบ</button>
+      </ng-container>
+      <ng-template #guestLinks>
+        <a routerLink="/login" class="btn btn-outline-light me-2">เข้าสู่ระบบ</a>
+        <a routerLink="/register" class="btn btn-primary">สมัครสมาชิก</a>
+      </ng-template>
+    </div>
+  </div>
+</header>

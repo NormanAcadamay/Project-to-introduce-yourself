@@ -1,0 +1,102 @@
+/* Wrapper for the login card */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f4f8;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-placeholder {
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.welcome-title {
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.login-title {
+  font-size: 1.6rem;
+  color: #006a6a;
+  font-weight: bold;
+}
+
+.login-subtitle {
+  font-size: 1rem;
+  color: #5f6f6f;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+/* Full-width fields */
+.full-width {
+  width: 100%;
+}
+
+mat-form-field {
+  margin-bottom: 20px;
+}
+
+/* Icon color */
+mat-icon {
+  color: #5f6f6f;
+}
+
+/* Gradient button styling */
+.gradient-button {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px 0;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: opacity 0.3s;
+  margin-bottom: 15px;
+}
+
+.gradient-button:hover {
+  opacity: 0.9;
+}
+
+button[color="accent"] {
+  background-color: #ff6f61;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px 0;
+  width: 100%;
+  border-radius: 5px;
+}
+
+button[color="accent"]:hover {
+  background-color: #d95a50;
+}

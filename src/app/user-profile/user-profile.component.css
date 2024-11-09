@@ -1,0 +1,23 @@
+/* user-profile.component.css */
+.profile-wrapper {
+  display: flex;
+  flex-direction: row; /* จัดให้อยู่ในแถว */
+  flex-wrap: wrap; /* ให้แถวใหม่เริ่มต้นเมื่อเนื้อหาล้น */
+  align-items: flex-start;
+  width: 100%;
+  gap: 20px; /* ระยะห่างระหว่างการ์ด */
+}
+
+.add-button {
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+
+.profile-card {
+  margin-top: 100px; /* ขยับการ์ดลงมาให้ห่างจากปุ่ม */
+}
+
+.small-card {
+  width: 250px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}

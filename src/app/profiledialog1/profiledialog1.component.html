@@ -1,0 +1,53 @@
+<h2 mat-dialog-title class="dialog-title">เพิ่มโปรไฟล์</h2>
+
+<mat-dialog-content class="scrollable-content">
+  <form [formGroup]="profileForm" class="profile-form">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>ชื่อจริง</mat-label>
+      <input matInput formControlName="firstName" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>นามสกุล</mat-label>
+      <input matInput formControlName="lastName" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>ชื่อเล่น</mat-label>
+      <input matInput formControlName="nickName" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>อายุ</mat-label>
+      <input matInput type="text" formControlName="age" required pattern="[0-9]*">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>วัน/เดือน/ปี</mat-label>
+      <input matInput type="date" formControlName="birthday" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>เบอร์โทรศัพท์</mat-label>
+      <input matInput formControlName="phone" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>อีเมล</mat-label>
+      <input matInput formControlName="email" required>
+    </mat-form-field>
+
+    <!-- Image Upload Field -->
+    <div class="image-upload">
+      <label class="image-upload-label" for="fileInput">
+        <mat-icon>add_a_photo</mat-icon> เลือกรูปภาพ
+      </label>
+      <input type="file" id="fileInput" (change)="onFileSelected($event)" accept="image/*" hidden>
+    </div>
+
+    <!-- Image Preview -->
+    <div *ngIf="imagePreview" class="image-preview">
+      <img [src]="imagePreview" alt="Profile Image Preview">
+    </div>
+
+  </form>
+</mat-dialog-content>
+
+<div class="button-container">
+  <button mat-raised-button color="primary" (click)="onSave()">Save</button>
+  <button mat-button (click)="onCancel()">Cancel</button>
+</div>
